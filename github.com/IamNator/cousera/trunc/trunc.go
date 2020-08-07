@@ -25,26 +25,18 @@ import "fmt"
 
 
 func main(){
-	fmt.Println(greeting("Nator"))
 
-//	var fruitArr [2] string
+	var s []int 
+	PrintSlice(s)
 
-	// //Assign Values
-	// fruitArr[0] = "Apple"
-	// fruitArr[1] = "Orange"
+	s = append(s, 0)
+	PrintSlice(s)
 
-	//Declare and assign
-	//fruitArr := [2]string{"Apple", "Orange"}
-
-	// fmt.Println(fruitArr)
-	// fmt.Println(fruitArr[1])
-
-	fruitSlice := []string{"Apple", "Orange", "Grape"}
-
-	fmt.Println(fruitSlice)
+	s = append(s, 1, 2)
+	PrintSlice(s)
 
 }
 
-func greeting(name string) string{
-	return "Hello " + name
+func PrintSlice(s []int){
+	fmt.Printf("%d  %d  %v\n", len(s), cap(s), s)
 }
